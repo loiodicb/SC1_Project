@@ -72,5 +72,6 @@ anova(fm)
 
 
 poissonStat <- glmer(number ~ preference * congruence + (1|subject), dat, family = poisson())
+emmeans (poissonStat, pairwise ~ preference)
 anova(poissonStat)
 
