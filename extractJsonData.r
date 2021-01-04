@@ -1,5 +1,5 @@
-rm(list = ls(all.names = TRUE)) #will clear all objects includes hidden objects.
-gc() #free up memrory and report the memory usage.
+#rm(list = ls(all.names = TRUE)) #will clear all objects includes hidden objects.
+#gc() #free up memrory and report the memory usage.
 library (RJSONIO)
 library (lme4)
 library(lmerTest)
@@ -7,8 +7,14 @@ library (ggplot2)
 library(gplots)
 library (emmeans)
 
-setwd("C:/Users/bryan/Documents/Master/Méthode en SC1 Mesures comportementales/Project/RStat/data")
-files <- list.files("C:/Users/bryan/Documents/Master/Méthode en SC1 Mesures comportementales/Project/RStat/data")
+# Windows Path
+#setwd("C:/Users/bryan/Documents/Master/M?thode en SC1 Mesures comportementales/Project/RStat/data")
+#files <- list.files("C:/Users/bryan/Documents/Master/M?thode en SC1 Mesures comportementales/Project/RStat/data")
+
+# Mac path
+setwd("/Users/bryan/Documents/Master/MÃ©thode en SC1 Mesures comportementales/Project/SC1_Project/SC1_Project-master/data")
+files <- list.files("/Users/bryan/Documents/Master/MÃ©thode en SC1 Mesures comportementales/Project/SC1_Project/SC1_Project-master/data")
+
 files
 subject <- congruence <- preference <- number <- c ()
 
