@@ -62,8 +62,8 @@ boxplot(number ~ preference * congruence + (1|subject), dat,
         col  = c("#56B4E9","#E69F00","#56B4E9","#E69F00","#56B4E9","#E69F00"))
 
 "effet simple"
-boxplot(number ~ preference, dat)
-boxplot(number ~ congruence, dat)
+boxplot(number ~ preference, dat,  col  = c("#56B4E9","#E69F00","#E45F00"))
+boxplot(number ~ congruence, dat,  col  = c("#56B4E9","#E69F00"))
         
 fm <- lmer(number ~ preference * congruence + (1|subject), data=dat)
 fm
@@ -74,4 +74,4 @@ anova(fm)
 poissonStat <- glmer(number ~ preference * congruence + (1|subject), dat, family = poisson())
 emmeans (poissonStat, pairwise ~ preference)
 anova(poissonStat)
-
+summary(poissonStat)
